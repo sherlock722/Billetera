@@ -13,7 +13,9 @@
 		3B41C0501C67B949007D6E08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C04E1C67B949007D6E08 /* Main.storyboard */; };
 		3B41C0521C67B949007D6E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C0511C67B949007D6E08 /* Assets.xcassets */; };
 		3B41C0551C67B949007D6E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C0531C67B949007D6E08 /* LaunchScreen.storyboard */; };
-		3B41C0601C67B94B007D6E08 /* BilleteraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C05F1C67B94B007D6E08 /* BilleteraTests.m */; };
+		3B41C06B1C67BEA8007D6E08 /* EuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C06A1C67BEA8007D6E08 /* EuroTests.m */; };
+		3B41C0701C67D791007D6E08 /* FJCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C06F1C67D791007D6E08 /* FJCEuro.m */; };
+		3B41C0711C67D9F6007D6E08 /* FJCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C06F1C67D791007D6E08 /* FJCEuro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,10 @@
 		3B41C0541C67B949007D6E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B41C0561C67B949007D6E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B41C05B1C67B94B007D6E08 /* BilleteraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilleteraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B41C05F1C67B94B007D6E08 /* BilleteraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BilleteraTests.m; sourceTree = "<group>"; };
 		3B41C0611C67B94B007D6E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B41C06A1C67BEA8007D6E08 /* EuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTests.m; sourceTree = "<group>"; };
+		3B41C06E1C67D791007D6E08 /* FJCEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCEuro.h; sourceTree = "<group>"; };
+		3B41C06F1C67D791007D6E08 /* FJCEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCEuro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		3B41C0441C67B948007D6E08 /* Billetera */ = {
 			isa = PBXGroup;
 			children = (
+				3B41C06D1C67D773007D6E08 /* Models */,
 				3B41C0481C67B949007D6E08 /* AppDelegate.h */,
 				3B41C0491C67B949007D6E08 /* AppDelegate.m */,
 				3B41C04B1C67B949007D6E08 /* ViewController.h */,
@@ -105,10 +110,27 @@
 		3B41C05E1C67B94B007D6E08 /* BilleteraTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B41C05F1C67B94B007D6E08 /* BilleteraTests.m */,
+				3B41C06C1C67D538007D6E08 /* Models */,
 				3B41C0611C67B94B007D6E08 /* Info.plist */,
 			);
 			path = BilleteraTests;
+			sourceTree = "<group>";
+		};
+		3B41C06C1C67D538007D6E08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B41C06A1C67BEA8007D6E08 /* EuroTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3B41C06D1C67D773007D6E08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B41C06E1C67D791007D6E08 /* FJCEuro.h */,
+				3B41C06F1C67D791007D6E08 /* FJCEuro.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +237,7 @@
 			files = (
 				3B41C04D1C67B949007D6E08 /* ViewController.m in Sources */,
 				3B41C04A1C67B949007D6E08 /* AppDelegate.m in Sources */,
+				3B41C0701C67D791007D6E08 /* FJCEuro.m in Sources */,
 				3B41C0471C67B949007D6E08 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B41C0601C67B94B007D6E08 /* BilleteraTests.m in Sources */,
+				3B41C0711C67D9F6007D6E08 /* FJCEuro.m in Sources */,
+				3B41C06B1C67BEA8007D6E08 /* EuroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
