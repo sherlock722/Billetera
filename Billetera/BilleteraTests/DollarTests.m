@@ -1,5 +1,5 @@
 //
-//  EuroTests.m
+//  DollarTests.m
 //  Billetera
 //
 //  Created by Javier Cazorla Moriche on 7/2/16.
@@ -7,14 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "FJCEuro.h"
+#import "FJCDollar.h"
 
-
-@interface EuroTests : XCTestCase
+@interface DollarTests : XCTestCase
 
 @end
 
-@implementation EuroTests
+@implementation DollarTests
 
 - (void)setUp {
     [super setUp];
@@ -26,30 +25,29 @@
     [super tearDown];
 }
 
-
 //Test de multiplicacion
 -(void) testMulplication {
     
-    FJCEuro *euro= [[FJCEuro alloc]initWithAmount:5];
-    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
-    FJCEuro *total = [euro times:2];
+    FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
+    FJCDollar *total = [five times:2];
+    
+    FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
     
     
-    //Para poner la propiedad oculta y ya no usarla
-    //XCTAssertEqual(10, total.amount, @"5 * 2 should be 10");
-    XCTAssertEqualObjects(ten, total, @"5 * 2 should be 10");
+    XCTAssertEqualObjects(ten, total, @"$5 * 2 should be $10");
     
     
 }
 
-
+//Test de Igualdad
 -(void)testEquality{
     
-    FJCEuro *five = [[FJCEuro alloc]initWithAmount:5];
-    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
-    FJCEuro *total = [five times:2];
+    FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
+    FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
+    FJCDollar *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"Equivalent object should be equals");
+    XCTAssertFalse([total isEqual:five],@"Non equivalent objects should not be equals");
     
     
 }
