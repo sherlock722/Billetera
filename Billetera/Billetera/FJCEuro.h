@@ -10,7 +10,8 @@
 
 @interface FJCEuro : NSObject
 
-@property (nonatomic,readonly) NSInteger amount;
+//Se oculta la propiedad amount (ver testMulplication)
+//@property (nonatomic,readonly) NSInteger amount;
 
 -(id) initWithAmount:(NSInteger) amount;
 

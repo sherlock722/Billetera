@@ -31,10 +31,13 @@
 -(void) testMulplication {
     
     FJCEuro *euro= [[FJCEuro alloc]initWithAmount:5];
+    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
     FJCEuro *total = [euro times:2];
     
     
-    XCTAssertEqual(10, total.amount, @"5 * 2 should be 10");
+    //Para poner la propiedad oculta y ya no usarla
+    //XCTAssertEqual(10, total.amount, @"5 * 2 should be 10");
+    XCTAssertEqualObjects(ten, total, @"5 * 2 should be 10");
     
     
 }
