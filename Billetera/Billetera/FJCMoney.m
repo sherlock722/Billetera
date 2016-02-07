@@ -7,6 +7,7 @@
 //
 
 #import "FJCMoney.h"
+#import "NSObject+GNUStepAddons.h"
 
 @interface FJCMoney ()
 
@@ -32,7 +33,11 @@
 -(FJCMoney *) times: (NSInteger) multiplier{
     
     //No se debería llamar y se debería usar la de la subclase
-    return self;
+    //return self;
+    
+    //Se usa la categoría
+    //_cmd es un parametro oculto que te indica cual es el selector actual
+    return [self subclassResponsibility:_cmd];
     
 }
 
