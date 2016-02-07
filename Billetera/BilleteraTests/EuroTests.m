@@ -34,9 +34,25 @@
     FJCEuro *total = [euro times:2];
     
     
-    XCTAssertEqual(10, total.amount, @"5 * 2 son 10");
+    XCTAssertEqual(10, total.amount, @"5 * 2 should be 10");
     
     
 }
+
+
+-(void)testEquality{
+    
+    FJCEuro *five = [[FJCEuro alloc]initWithAmount:5];
+    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
+    FJCEuro *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total, @"Equivalent object should be equals");
+    
+    
+    
+    
+    
+}
+
 
 @end
