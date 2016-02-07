@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FJCMoney.h"
 
-@interface FJCEuro : NSObject
+@interface FJCEuro : FJCMoney
 
 //Se oculta la propiedad amount (ver testMulplication)
 //@property (nonatomic,readonly) NSInteger amount;

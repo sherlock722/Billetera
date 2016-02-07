@@ -19,6 +19,7 @@
 		3B41C0751C67EE68007D6E08 /* DollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C0741C67EE68007D6E08 /* DollarTests.m */; };
 		3B41C0781C67EFB8007D6E08 /* FJCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C0771C67EFB8007D6E08 /* FJCDollar.m */; };
 		3B41C0791C67EFC2007D6E08 /* FJCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C0771C67EFB8007D6E08 /* FJCDollar.m */; };
+		3B41C07C1C67F611007D6E08 /* FJCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C07B1C67F611007D6E08 /* FJCMoney.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		3B41C0741C67EE68007D6E08 /* DollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTests.m; sourceTree = "<group>"; };
 		3B41C0761C67EFB8007D6E08 /* FJCDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCDollar.h; sourceTree = "<group>"; };
 		3B41C0771C67EFB8007D6E08 /* FJCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCDollar.m; sourceTree = "<group>"; };
+		3B41C07A1C67F611007D6E08 /* FJCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCMoney.h; sourceTree = "<group>"; };
+		3B41C07B1C67F611007D6E08 /* FJCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCMoney.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				3B41C06F1C67D791007D6E08 /* FJCEuro.m */,
 				3B41C0761C67EFB8007D6E08 /* FJCDollar.h */,
 				3B41C0771C67EFB8007D6E08 /* FJCDollar.m */,
+				3B41C07A1C67F611007D6E08 /* FJCMoney.h */,
+				3B41C07B1C67F611007D6E08 /* FJCMoney.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B41C07C1C67F611007D6E08 /* FJCMoney.m in Sources */,
 				3B41C04D1C67B949007D6E08 /* ViewController.m in Sources */,
 				3B41C04A1C67B949007D6E08 /* AppDelegate.m in Sources */,
 				3B41C0701C67D791007D6E08 /* FJCEuro.m in Sources */,

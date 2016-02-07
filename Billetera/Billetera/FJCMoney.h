@@ -1,5 +1,5 @@
 //
-//  FJCDollar.h
+//  FJCMoney.h
 //  Billetera
 //
 //  Created by Javier Cazorla Moriche on 7/2/16.
@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FJCMoney.h"
 
-@interface FJCDollar : FJCMoney
+@interface FJCMoney : NSObject
 
 -(id) initWithAmount:(NSInteger) amount;
 
--(FJCDollar *) times: (NSInteger) multiplier;
+-(FJCMoney *) times: (NSInteger) multiplier;
 
 @end
