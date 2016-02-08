@@ -8,16 +8,20 @@
 
 #import "FJCDollar.h"
 
-@interface FJCDollar ()
+
+//Se ha creado en un fichero de cabecera privado la propiedad amount
+#import "FJCMoney-Private.h"
+/*@interface FJCDollar ()
 
 @property (nonatomic) NSInteger amount;
 
-@end
+@end*/
 
 
 @implementation FJCDollar
 
--(id) initWithAmount:(NSInteger) amount {
+//Lo llevamos a la superclase (FJCMoney)
+/*-(id) initWithAmount:(NSInteger) amount {
     
     if (self= [super init]){
         
@@ -27,11 +31,12 @@
     
     return self;
     
-}
+}*/
 
 -(FJCDollar *) times: (NSInteger) multiplier{
     
-    FJCDollar *newDollar = [[FJCDollar alloc] initWithAmount:self.amount * multiplier];
+    //Utilizamos el método integerValue para obtener del NSNumber su parte integer
+    FJCDollar *newDollar = [[FJCDollar alloc] initWithAmount:[self.amount integerValue] * multiplier];
     
     return newDollar;
     
@@ -39,16 +44,16 @@
 
 #pragma mark - Overwritten
 
--(BOOL) isEqual:(id)object{
+/*-(BOOL) isEqual:(id)object{
     
     return [self amount] == [object amount];
     
-}
+}*/
 
--(NSUInteger)hash{
+/*-(NSUInteger)hash{
     
     return (NSUInteger) self.amount;
-}
+}*/
 
 @end
 

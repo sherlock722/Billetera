@@ -8,17 +8,21 @@
 
 #import "FJCEuro.h"
 
-@interface FJCEuro ()
+
+//Se ha creado en un fichero de cabecera privado
+#import "FJCMoney-Private.h"
+/*@interface FJCEuro ()
 
 @property (nonatomic) NSInteger amount;
 
-@end
+@end*/
 
 
 
 @implementation FJCEuro
 
--(id) initWithAmount:(NSInteger) amount {
+//Lo llevamos a la superclase (FJCMoney)
+/*-(id) initWithAmount:(NSInteger) amount {
     
     if (self= [super init]){
         
@@ -28,12 +32,13 @@
     
     return self;
     
-}
+}*/
 
 
 -(FJCEuro *) times: (NSInteger) multiplier{
     
-    FJCEuro *newEuro = [[FJCEuro alloc] initWithAmount:self.amount * multiplier];
+    //Utilizamos el método integerValue para obtener del NSNumber su parte integer
+    FJCEuro *newEuro = [[FJCEuro alloc] initWithAmount:[self.amount integerValue] * multiplier];
     
     return newEuro;
     
@@ -42,17 +47,17 @@
 
 #pragma mark - Overwritten
 
--(BOOL) isEqual:(id)object{
+/*-(BOOL) isEqual:(id)object{
     
     return [self amount] == [object amount];
     
     
-}
+}*/
 
--(NSUInteger)hash{
+/*-(NSUInteger)hash{
     
     return (NSUInteger) self.amount;
-}
+}*/
 
 
 

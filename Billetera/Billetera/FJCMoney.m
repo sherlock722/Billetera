@@ -9,11 +9,16 @@
 #import "FJCMoney.h"
 #import "NSObject+GNUStepAddons.h"
 
-@interface FJCMoney ()
+//Se ha creado en un fichero de cabecera privado la propiedad amount
+#import "FJCMoney-Private.h"
+
+/*@interface FJCMoney ()
 
 @property (nonatomic) NSInteger amount;
 
-@end
+@end*/
+
+
 
 @implementation FJCMoney
 
@@ -22,8 +27,10 @@
     
     if (self= [super init]){
         
-        _amount = amount;
+        //_amount = amount;
         
+        //Se empaqueta el parametro como un NSNumber
+        _amount = @(amount);
     }
     
     return self;
@@ -49,5 +56,22 @@
     //return [NSString stringWithFormat:@"<%@ %d", [self class], [self amount]];
     return [NSString stringWithFormat:@"<%@ %ld", [self class], (long)[self amount]];
 }
+
+
+-(BOOL) isEqual:(id)object{
+    
+    return [self amount] == [object amount];
+    
+}
+
+-(NSUInteger)hash{
+    
+    //Sólo se compara la cantidad.
+    //Deberiamos en el futuro tener en cuenta las divisas
+    return (NSUInteger) self.amount;
+}
+
+
+
 
 @end

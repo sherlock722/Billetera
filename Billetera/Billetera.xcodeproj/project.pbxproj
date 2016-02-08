@@ -59,6 +59,7 @@
 		3B41C07E1C67FC22007D6E08 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		3B41C07F1C67FC22007D6E08 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		3B41C0811C68035E007D6E08 /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
+		3BFE49681C694F7E00E454B0 /* FJCMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FJCMoney-Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +152,7 @@
 				3B41C0771C67EFB8007D6E08 /* FJCDollar.m */,
 				3B41C07A1C67F611007D6E08 /* FJCMoney.h */,
 				3B41C07B1C67F611007D6E08 /* FJCMoney.m */,
+				3BFE49681C694F7E00E454B0 /* FJCMoney-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -464,6 +466,7 @@
 				3B41C0661C67B94B007D6E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B41C0671C67B94B007D6E08 /* Build configuration list for PBXNativeTarget "BilleteraTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +475,7 @@
 				3B41C0691C67B94B007D6E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

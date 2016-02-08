@@ -55,8 +55,6 @@
 }
 
 
-
-
 -(void)testHash{
     
     FJCEuro *a=[[FJCEuro alloc]initWithAmount:2];
@@ -67,6 +65,19 @@
     
 }
 
+-(void) testAmountStorage{
+    
+    FJCEuro *euro=[[FJCEuro alloc]initWithAmount:2];
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)]integerValue],@"The value retrieved should be the same as the stored");
+    
+#pragma clan diagnostic pop
+    
+    
+}
 
 
 

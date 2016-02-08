@@ -14,7 +14,8 @@
 //Se oculta la propiedad amount (ver testMulplication)
 //@property (nonatomic,readonly) NSInteger amount;
 
--(id) initWithAmount:(NSInteger) amount;
+//Lo llevamos a la superclase (FJCMoney)
+//-(id) initWithAmount:(NSInteger) amount;
 
 -(FJCEuro *) times: (NSInteger) multiplier;
 
