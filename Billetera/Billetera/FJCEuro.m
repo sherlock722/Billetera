@@ -49,6 +49,11 @@
     
 }
 
+-(NSUInteger)hash{
+    
+    return (NSUInteger) self.amount;
+}
+
 
 
 

@@ -55,4 +55,20 @@
 }
 
 
+
+
+-(void)testHash{
+    
+    FJCEuro *a=[[FJCEuro alloc]initWithAmount:2];
+    FJCEuro *b=[[FJCEuro alloc]initWithAmount:2];
+    
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal object must have some hash");
+    
+}
+
+
+
+
+
 @end

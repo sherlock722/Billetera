@@ -41,4 +41,13 @@
     
 }
 
+
+
+#pragma mark - Overwritten
+-(NSString*) description{
+    
+    //return [NSString stringWithFormat:@"<%@ %d", [self class], [self amount]];
+    return [NSString stringWithFormat:@"<%@ %ld", [self class], (long)[self amount]];
+}
+
 @end

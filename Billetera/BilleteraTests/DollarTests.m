@@ -53,4 +53,16 @@
 }
 
 
+-(void)testHash{
+    
+    FJCDollar *a=[[FJCDollar alloc]initWithAmount:2];
+    FJCDollar *b=[[FJCDollar alloc]initWithAmount:2];
+    
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal object must have some hash");
+    
+}
+
+
+
 @end
