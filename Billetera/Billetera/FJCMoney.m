@@ -26,20 +26,22 @@
 
 +(id) euroWithAmount: (NSInteger) amount{
     
-    return [[FJCEuro alloc] initWithAmount:amount];
+    //return [[FJCEuro alloc] initWithAmount:amount];
+    return [[FJCMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 
 
 +(id) dollarWithAmount: (NSInteger) amount{
     
-    return [[FJCDollar alloc]initWithAmount:amount];
-    
+    //return [[FJCDollar alloc]initWithAmount:amount];
+    return [[FJCMoney alloc] initWithAmount:amount currency:@"USD"];
     
 }
 
 
--(id) initWithAmount:(NSInteger) amount {
+-(id) initWithAmount:(NSInteger) amount
+            currency:(NSString *)currency{
     
     if (self= [super init]){
         
@@ -47,6 +49,7 @@
         
         //Se empaqueta el parametro como un NSNumber
         _amount = @(amount);
+        _currency = currency;
     }
     
     return self;
@@ -57,8 +60,10 @@
 
 -(id) times: (NSInteger) multiplier{
     
-    FJCMoney *newMoney = [[FJCMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
+    //FJCMoney *newMoney = [[FJCMoney alloc] initWithAmount:[self.amount integerValue] * multiplier]
     
+    FJCMoney *newMoney = [[FJCMoney alloc] initWithAmount:[self.amount integerValue] *multiplier
+                                                 currency:self.currency];
     return newMoney;
     
 }
