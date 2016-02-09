@@ -16,6 +16,7 @@
 
 -(id) initWithAmount:(NSInteger) amount;
 
--(FJCMoney *) times: (NSInteger) multiplier;
-
+//Devolvemos un id para que cuando se mande el mensaje times sepa que clase lo está llamando y devuelve ese tipo
+//-(FJCMoney *) times: (NSInteger) multiplier;
+-(id) times: (NSInteger) multiplier;
 @end

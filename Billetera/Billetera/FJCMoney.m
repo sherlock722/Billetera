@@ -39,12 +39,6 @@
 }
 
 
-
-
-
-
-
-
 -(id) initWithAmount:(NSInteger) amount {
     
     if (self= [super init]){
@@ -59,7 +53,16 @@
     
 }
 
--(FJCMoney *) times: (NSInteger) multiplier{
+//Devolvemos un id para que cuando se mande el mensaje times sepa que clase lo está llamando y devuelve ese tipo
+
+-(id) times: (NSInteger) multiplier{
+    
+    FJCMoney *newMoney = [[FJCMoney alloc] initWithAmount:[self.amount integerValue] * multiplier];
+    
+    return newMoney;
+    
+}
+/*-(FJCMoney *) times: (NSInteger) multiplier{
     
     //No se debería llamar y se debería usar la de la subclase
     //return self;
@@ -68,7 +71,7 @@
     //_cmd es un parametro oculto que te indica cual es el selector actual
     return [self subclassResponsibility:_cmd];
     
-}
+}*/
 
 
 

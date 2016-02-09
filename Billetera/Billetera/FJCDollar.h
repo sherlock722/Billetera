@@ -14,6 +14,7 @@
 //Lo llevamos a la superclase (FJCMoney)
 //-(id) initWithAmount:(NSInteger) amount;
 
--(FJCDollar *) times: (NSInteger) multiplier;
+//Lo llevamos a la superclase (FJCMoney)
+//-(FJCDollar *) times: (NSInteger) multiplier;
 
 @end

@@ -35,14 +35,15 @@
 }*/
 
 
--(FJCEuro *) times: (NSInteger) multiplier{
+//Lo llevamos a la superclase (FJCMoney)
+/*-(FJCEuro *) times: (NSInteger) multiplier{
     
     //Utilizamos el método integerValue para obtener del NSNumber su parte integer
     FJCEuro *newEuro = [[FJCEuro alloc] initWithAmount:[self.amount integerValue] * multiplier];
     
     return newEuro;
     
-}
+}*/
 
 
 #pragma mark - Overwritten

@@ -25,11 +25,12 @@
     [super tearDown];
 }
 
--(void)testThatTimesRaisesExceptions{
+//Metodo que comprueba exceptions
+/*-(void)testThatTimesRaisesExceptions{
     
     FJCMoney *money = [[FJCMoney alloc] initWithAmount:1];
     XCTAssertThrows([money times:2],@"Should Raise an Exception");
     
-}
+}*/
 
 @end
