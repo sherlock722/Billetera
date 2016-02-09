@@ -79,6 +79,19 @@
 }*/
 
 
+-(FJCMoney*) plus:(FJCMoney*) other{
+    
+    NSInteger totalAmount = [[self amount] integerValue] + [[other amount]integerValue];
+    
+    FJCMoney *total = [[FJCMoney alloc]initWithAmount:totalAmount currency:[self currency]];
+    
+    
+    return total;
+    
+}
+
+
+
 
 #pragma mark - Overwritten
 -(NSString*) description{
@@ -90,7 +103,12 @@
 
 -(BOOL) isEqual:(id)object{
     
-    return [self amount] == [object amount];
+    //Para el test de comparar divisas tengo que comprobar que divisas estoy comparando
+    if ([[self currency] isEqual:[object currency]]){
+        return [self amount] == [object amount];
+    }else {
+        return NO;
+    }
     
 }
 

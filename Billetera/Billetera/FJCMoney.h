@@ -22,4 +22,6 @@
 //Devolvemos un id para que cuando se mande el mensaje times sepa que clase lo está llamando y devuelve ese tipo
 //-(FJCMoney *) times: (NSInteger) multiplier;
 -(id) times: (NSInteger) multiplier;
+
+-(FJCMoney*) plus:(FJCMoney*) other;
 @end

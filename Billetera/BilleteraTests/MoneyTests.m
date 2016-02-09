@@ -82,6 +82,17 @@
     
 }
 
+//Test para diferenciar DIVISAS
+-(void) testDiferentsCurrencies{
+    
+    FJCMoney *euro = [FJCMoney euroWithAmount:1];
+    FJCMoney *dollar = [FJCMoney dollarWithAmount:1];
+    
+    
+    XCTAssertNotEqualObjects(euro, dollar,@"Different currencies should not be equals");
+    
+}
+
 
 -(void)testHash{
     
@@ -116,5 +127,20 @@
     
     
 }
+
+
+-(void) testSimpleAddition{
+    
+    
+    XCTAssertEqualObjects([[FJCMoney dollarWithAmount:5] plus:[FJCMoney dollarWithAmount:5]],
+                             [FJCMoney dollarWithAmount:10],
+                             @"$5 + $5 = $10");
+    
+    
+}
+
+
+
+
 
 @end
