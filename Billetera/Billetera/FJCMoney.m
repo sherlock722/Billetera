@@ -18,9 +18,31 @@
 
 @end*/
 
+#import "FJCEuro.h"
+#import "FJCDollar.h"
 
 
 @implementation FJCMoney
+
++(id) euroWithAmount: (NSInteger) amount{
+    
+    return [[FJCEuro alloc] initWithAmount:amount];
+}
+
+
+
++(id) dollarWithAmount: (NSInteger) amount{
+    
+    return [[FJCDollar alloc]initWithAmount:amount];
+    
+    
+}
+
+
+
+
+
+
 
 
 -(id) initWithAmount:(NSInteger) amount {

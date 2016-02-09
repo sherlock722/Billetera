@@ -28,10 +28,16 @@
 //Test de multiplicacion
 -(void) testMulplication {
     
-    FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
-    FJCDollar *total = [five times:2];
+    //Se sustituye initWithAmount por el método de clase dollarWithAmount
     
-    FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
+    //FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
+    //FJCDollar *total = [five times:2];
+    //FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
+    
+    
+    FJCDollar *five = [FJCMoney dollarWithAmount:5];
+    FJCDollar *total = [five times:2];
+    FJCDollar *ten = [FJCMoney dollarWithAmount:10];
     
     
     XCTAssertEqualObjects(ten, total, @"$5 * 2 should be $10");
@@ -42,9 +48,17 @@
 //Test de Igualdad
 -(void)testEquality{
     
-    FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
-    FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
+    
+    //Se sustituye initWithAmount por el método de clase dollarWithAmount
+    //FJCDollar *five = [[FJCDollar alloc]initWithAmount:5];
+    //FJCDollar *ten = [[FJCDollar alloc]initWithAmount:10];
+    //FJCDollar *total = [five times:2];
+    
+    
+    FJCDollar *five = [FJCMoney dollarWithAmount:5];
+    FJCDollar *ten = [FJCMoney dollarWithAmount:10];
     FJCDollar *total = [five times:2];
+    
     
     XCTAssertEqualObjects(ten, total, @"Equivalent object should be equals");
     XCTAssertFalse([total isEqual:five],@"Non equivalent objects should not be equals");
@@ -55,8 +69,13 @@
 
 -(void)testHash{
     
-    FJCDollar *a=[[FJCDollar alloc]initWithAmount:2];
-    FJCDollar *b=[[FJCDollar alloc]initWithAmount:2];
+    //Se sustituye initWithAmount por el método de clase dollarWithAmount
+    //FJCDollar *a=[[FJCDollar alloc]initWithAmount:2];
+    //FJCDollar *b=[[FJCDollar alloc]initWithAmount:2];
+    
+    
+    FJCDollar *a=[FJCMoney dollarWithAmount:2];
+    FJCDollar *b=[FJCMoney dollarWithAmount:2];
     
     
     XCTAssertEqual([a hash], [b hash], @"Equal object must have some hash");
@@ -65,7 +84,11 @@
 
 -(void) testAmountStorage{
     
-    FJCDollar *dollar=[[FJCDollar alloc]initWithAmount:2];
+    //Se sustituye initWithAmount por el método de clase dollarWithAmount
+    //FJCDollar *dollar=[[FJCDollar alloc]initWithAmount:2];
+    
+    FJCDollar *dollar=[FJCDollar dollarWithAmount:2];
+    
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"

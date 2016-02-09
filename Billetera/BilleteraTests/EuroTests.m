@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "FJCEuro.h"
+#import "FJCMoney.h"
 
 
 @interface EuroTests : XCTestCase
@@ -30,8 +31,14 @@
 //Test de multiplicacion
 -(void) testMulplication {
     
-    FJCEuro *euro= [[FJCEuro alloc]initWithAmount:5];
-    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
+    //Se sustituye initWithAmount por el método de clase euroWithAmount
+    
+    //FJCEuro *euro= [[FJCEuro alloc]initWithAmount:5];
+    //FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
+    //FJCEuro *total = [euro times:2];
+    
+    FJCEuro *euro= [FJCMoney euroWithAmount:5];
+    FJCEuro *ten = [FJCMoney euroWithAmount:10];
     FJCEuro *total = [euro times:2];
     
     
@@ -45,8 +52,14 @@
 
 -(void)testEquality{
     
-    FJCEuro *five = [[FJCEuro alloc]initWithAmount:5];
-    FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
+    
+    //Se sustituye initWithAmount por el método de clase euroWithAmount
+    //FJCEuro *five = [[FJCEuro alloc]initWithAmount:5];
+    //FJCEuro *ten = [[FJCEuro alloc]initWithAmount:10];
+    //FJCEuro *total = [five times:2];
+    
+    FJCEuro *five = [FJCMoney euroWithAmount:5];
+    FJCEuro *ten = [FJCMoney euroWithAmount:10];
     FJCEuro *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"Equivalent object should be equals");
@@ -57,8 +70,12 @@
 
 -(void)testHash{
     
-    FJCEuro *a=[[FJCEuro alloc]initWithAmount:2];
-    FJCEuro *b=[[FJCEuro alloc]initWithAmount:2];
+    //Se sustituye initWithAmount por el método de clase euroWithAmount
+    //FJCEuro *a=[[FJCEuro alloc]initWithAmount:2];
+    //FJCEuro *b=[[FJCEuro alloc]initWithAmount:2];
+    
+    FJCEuro *a=[FJCMoney euroWithAmount:2];
+    FJCEuro *b=[FJCMoney euroWithAmount:2];
     
     
     XCTAssertEqual([a hash], [b hash], @"Equal object must have some hash");
@@ -67,7 +84,10 @@
 
 -(void) testAmountStorage{
     
-    FJCEuro *euro=[[FJCEuro alloc]initWithAmount:2];
+    
+    //Se sustituye initWithAmount por el método de clase euroWithAmount
+    //FJCEuro *euro=[[FJCEuro alloc]initWithAmount:2];
+    FJCEuro *euro=[FJCMoney euroWithAmount:2];
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
