@@ -17,6 +17,8 @@
 		3B41C0801C67FC22007D6E08 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C07F1C67FC22007D6E08 /* NSObject+GNUStepAddons.m */; };
 		3B41C0821C68035E007D6E08 /* MoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C0811C68035E007D6E08 /* MoneyTests.m */; };
 		3B41C0831C6804E1007D6E08 /* FJCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C07B1C67F611007D6E08 /* FJCMoney.m */; };
+		3BD660091C6AA44000B27ADD /* BrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD660081C6AA44000B27ADD /* BrokerTests.m */; };
+		3BD6600C1C6AA6FD00B27ADD /* FJCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		3B41C07E1C67FC22007D6E08 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		3B41C07F1C67FC22007D6E08 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		3B41C0811C68035E007D6E08 /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
+		3BD660081C6AA44000B27ADD /* BrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTests.m; sourceTree = "<group>"; };
+		3BD6600A1C6AA6FD00B27ADD /* FJCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCBroker.h; sourceTree = "<group>"; };
+		3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCBroker.m; sourceTree = "<group>"; };
 		3BFE49681C694F7E00E454B0 /* FJCMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FJCMoney-Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				3B41C0811C68035E007D6E08 /* MoneyTests.m */,
+				3BD660081C6AA44000B27ADD /* BrokerTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 				3B41C07A1C67F611007D6E08 /* FJCMoney.h */,
 				3B41C07B1C67F611007D6E08 /* FJCMoney.m */,
 				3BFE49681C694F7E00E454B0 /* FJCMoney-Private.h */,
+				3BD6600A1C6AA6FD00B27ADD /* FJCBroker.h */,
+				3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 			files = (
 				3B41C07C1C67F611007D6E08 /* FJCMoney.m in Sources */,
 				3B41C04D1C67B949007D6E08 /* ViewController.m in Sources */,
+				3BD6600C1C6AA6FD00B27ADD /* FJCBroker.m in Sources */,
 				3B41C0801C67FC22007D6E08 /* NSObject+GNUStepAddons.m in Sources */,
 				3B41C04A1C67B949007D6E08 /* AppDelegate.m in Sources */,
 				3B41C0471C67B949007D6E08 /* main.m in Sources */,
@@ -262,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD660091C6AA44000B27ADD /* BrokerTests.m in Sources */,
 				3B41C0831C6804E1007D6E08 /* FJCMoney.m in Sources */,
 				3B41C0821C68035E007D6E08 /* MoneyTests.m in Sources */,
 			);

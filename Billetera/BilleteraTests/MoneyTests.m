@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "FJCMoney.h"
+#import "FJCBroker.h"
 
 @interface MoneyTests : XCTestCase
 
@@ -139,8 +140,24 @@
     
 }
 
+//Test para comprobar que el método hash = amount
+-(void) testHashIsAmount {
+    
+    
+    FJCMoney * one = [FJCMoney dollarWithAmount:1];
+    XCTAssertEqual([one hash], 1, @"The hash must be the same as the amount");
+    
+}
 
-
+//Test para la description
+-(void) testDescription{
+    
+    FJCMoney *one = [FJCMoney dollarWithAmount:1];
+    NSString *def= @"<FJCMoney: $1>";
+    
+    XCTAssertEqualObjects(def, [one description],@"Description must match template");
+    
+}
 
 
 @end
