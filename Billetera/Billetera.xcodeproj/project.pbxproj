@@ -17,6 +17,9 @@
 		3B41C0801C67FC22007D6E08 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C07F1C67FC22007D6E08 /* NSObject+GNUStepAddons.m */; };
 		3B41C0821C68035E007D6E08 /* MoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C0811C68035E007D6E08 /* MoneyTests.m */; };
 		3B41C0831C6804E1007D6E08 /* FJCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C07B1C67F611007D6E08 /* FJCMoney.m */; };
+		3BC50AA21C6C030D00889F4B /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC50AA11C6C030D00889F4B /* WalletTests.m */; };
+		3BC50AA51C6C070600889F4B /* FJCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC50AA41C6C070600889F4B /* FJCWallet.m */; };
+		3BC50AA61C6C094F00889F4B /* FJCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC50AA41C6C070600889F4B /* FJCWallet.m */; };
 		3BD660091C6AA44000B27ADD /* BrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD660081C6AA44000B27ADD /* BrokerTests.m */; };
 		3BD6600C1C6AA6FD00B27ADD /* FJCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,9 @@
 		3B41C07E1C67FC22007D6E08 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		3B41C07F1C67FC22007D6E08 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		3B41C0811C68035E007D6E08 /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
+		3BC50AA11C6C030D00889F4B /* WalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
+		3BC50AA31C6C070600889F4B /* FJCWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCWallet.h; sourceTree = "<group>"; };
+		3BC50AA41C6C070600889F4B /* FJCWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCWallet.m; sourceTree = "<group>"; };
 		3BD660081C6AA44000B27ADD /* BrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTests.m; sourceTree = "<group>"; };
 		3BD6600A1C6AA6FD00B27ADD /* FJCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCBroker.h; sourceTree = "<group>"; };
 		3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCBroker.m; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			children = (
 				3B41C0811C68035E007D6E08 /* MoneyTests.m */,
 				3BD660081C6AA44000B27ADD /* BrokerTests.m */,
+				3BC50AA11C6C030D00889F4B /* WalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 				3BFE49681C694F7E00E454B0 /* FJCMoney-Private.h */,
 				3BD6600A1C6AA6FD00B27ADD /* FJCBroker.h */,
 				3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */,
+				3BC50AA31C6C070600889F4B /* FJCWallet.h */,
+				3BC50AA41C6C070600889F4B /* FJCWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B41C07C1C67F611007D6E08 /* FJCMoney.m in Sources */,
+				3BC50AA51C6C070600889F4B /* FJCWallet.m in Sources */,
 				3B41C04D1C67B949007D6E08 /* ViewController.m in Sources */,
 				3BD6600C1C6AA6FD00B27ADD /* FJCBroker.m in Sources */,
 				3B41C0801C67FC22007D6E08 /* NSObject+GNUStepAddons.m in Sources */,
@@ -271,8 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC50AA21C6C030D00889F4B /* WalletTests.m in Sources */,
 				3BD660091C6AA44000B27ADD /* BrokerTests.m in Sources */,
 				3B41C0831C6804E1007D6E08 /* FJCMoney.m in Sources */,
+				3BC50AA61C6C094F00889F4B /* FJCWallet.m in Sources */,
 				3B41C0821C68035E007D6E08 /* MoneyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,6 @@
 //@property (nonatomic) NSInteger amount;
 
 //Se cambia para poder corregir pasar el test testAmountStorage de FJCEuro
-@property (nonatomic,strong) NSNumber* amount;
+//@property (nonatomic,strong) NSNumber* amount;
 
 @end

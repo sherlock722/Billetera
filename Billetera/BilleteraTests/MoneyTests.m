@@ -153,7 +153,7 @@
 -(void) testDescription{
     
     FJCMoney *one = [FJCMoney dollarWithAmount:1];
-    NSString *def= @"<FJCMoney: $1>";
+    NSString *def= @"<FJCMoney: USD 1>";
     
     XCTAssertEqualObjects(def, [one description],@"Description must match template");
     

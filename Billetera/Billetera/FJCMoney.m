@@ -10,16 +10,18 @@
 #import "NSObject+GNUStepAddons.h"
 
 //Se ha creado en un fichero de cabecera privado la propiedad amount
-#import "FJCMoney-Private.h"
+//#import "FJCMoney-Private.h"
 
-/*@interface FJCMoney ()
-
-@property (nonatomic) NSInteger amount;
-
-@end*/
 
 #import "FJCEuro.h"
 #import "FJCDollar.h"
+
+@interface FJCMoney ()
+
+@property (nonatomic,strong) NSNumber *amount;
+
+@end
+
 
 
 @implementation FJCMoney
@@ -58,7 +60,7 @@
 
 //Devolvemos un id para que cuando se mande el mensaje times sepa que clase lo está llamando y devuelve ese tipo
 
--(id) times: (NSInteger) multiplier{
+-(id<FJCMoney>) times: (NSInteger) multiplier{
     
     //FJCMoney *newMoney = [[FJCMoney alloc] initWithAmount:[self.amount integerValue] * multiplier]
     
@@ -79,7 +81,7 @@
 }*/
 
 
--(FJCMoney*) plus:(FJCMoney*) other{
+-(id<FJCMoney>) plus:(FJCMoney*) other{
     
     NSInteger totalAmount = [[self amount] integerValue] + [[other amount]integerValue];
     
@@ -92,12 +94,14 @@
 
 
 
-
 #pragma mark - Overwritten
 -(NSString*) description{
     
     //return [NSString stringWithFormat:@"<%@ %d", [self class], [self amount]];
-    return [NSString stringWithFormat:@"<%@ %ld", [self class], (long)[self amount]];
+    
+    //Para que pase el test testDescription
+    //return [NSString stringWithFormat:@"<%@ %ld", [self class], (long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>", [self class],self.currency,self.amount];
 }
 
 
@@ -116,7 +120,10 @@
     
     //Sólo se compara la cantidad.
     //Deberiamos en el futuro tener en cuenta las divisas
-    return (NSUInteger) self.amount;
+    //return (NSUInteger) self.amount;
+    
+    //Para pasar el test testHashIsAmount
+    return  [[self amount] integerValue];
 }
 
 

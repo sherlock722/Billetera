@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FJCMoney.h"
 
-@class FJCMoney;
+//@class FJCMoney;
 @interface FJCBroker : NSObject
 
 
--(FJCMoney*) reduce : (FJCMoney*) money
+
+-(id<FJCMoney>) reduce : (FJCMoney*) money
          toCurrency : (NSString*) currency;
 
 
