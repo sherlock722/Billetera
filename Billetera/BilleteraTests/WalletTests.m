@@ -28,17 +28,17 @@
 }
 
 // €40 + $20 = $100 Tasa 2:1
-/*-(void) testAddictionWithRedaction {
+-(void) testAddictionWithRedaction {
     
     //Se neceita un broker
     FJCBroker *broker = [FJCBroker new];
-    [broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
     
     FJCWallet *wallet = [[FJCWallet alloc] initWithAmount:40 currency:@"EUR"];
     [wallet plus:[FJCMoney dollarWithAmount:20]];
     
     FJCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-    XCTAssertEqualObjects([FJCMoney dollarWithAmount:100], reduced,@"€40 + $20 = $100 Tasa 2:1");
-}*/
+    XCTAssertEqualObjects(reduced,[FJCMoney dollarWithAmount:100],@"€40 + $20 = $100 Tasa 2:1");
+}
 
 @end

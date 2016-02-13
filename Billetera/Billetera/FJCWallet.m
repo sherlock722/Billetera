@@ -64,4 +64,19 @@
     
 }
 
+-(FJCMoney*) reduceToCurrency:(NSString *)currency
+                      wihtBroker:(FJCBroker *)broker{
+    
+    FJCMoney *result = [[FJCMoney alloc]initWithAmount:0 currency:currency];
+    
+    
+    for (FJCMoney *each in self.moneys){
+        
+        result = [result plus:[each reduceToCurrency:currency wihtBroker:broker]];
+        
+    }
+    return result;
+    
+}
+
 @end

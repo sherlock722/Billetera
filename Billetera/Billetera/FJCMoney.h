@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class FJCMoney;
+@class FJCBroker;
 
 @protocol FJCMoney <NSObject>
 
@@ -20,6 +21,9 @@
 -(id<FJCMoney>) times: (NSInteger) multiplier;
 
 -(id<FJCMoney>) plus:(FJCMoney*) other;
+
+-(id <FJCMoney>) reduceToCurrency: (NSString*) currency
+                       wihtBroker: (FJCBroker*)broker;
 
 
 @end

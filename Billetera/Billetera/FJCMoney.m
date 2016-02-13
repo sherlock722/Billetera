@@ -15,6 +15,7 @@
 
 #import "FJCEuro.h"
 #import "FJCDollar.h"
+#import "FJCBroker.h"
 
 @interface FJCMoney ()
 
@@ -89,6 +90,43 @@
     
     
     return total;
+    
+}
+
+
+-(id <FJCMoney>) reduceToCurrency: (NSString*) currency
+                       wihtBroker: (FJCBroker*)broker{
+    
+    //Se comprueba que divisa de origen y destino son las mismas
+    FJCMoney *result;
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]]doubleValue];
+    
+    
+    if ([self.currency isEqual: currency]){
+        
+        result=self;
+        
+    }else if (rate == 0){
+        
+        //No Existe una tasa de conversion (rate = 0)
+        
+        [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %@" , self.currency,currency];
+        
+    } else{
+        
+        //Tenemos conversion
+        
+        /*double rate = [[[self rates]objectForKey:[self keyFromCurrency:money.currency toCurrency:currency]]doubleValue];*/
+        
+        NSInteger newAmount= [self.amount integerValue] * rate;
+        
+        result = [[FJCMoney alloc]initWithAmount:newAmount currency:currency];
+        
+    }
+    
+    return result;
     
 }
 
