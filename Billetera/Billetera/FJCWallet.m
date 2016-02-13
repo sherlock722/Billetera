@@ -20,6 +20,16 @@
 
 @implementation FJCWallet
 
+
+- (NSUInteger)count {
+    return [self.moneys count];
+}
+
+/*- (NSArray *)currencies {
+    
+    return [self.moneys allKeys];
+}*/
+
 -(id)initWithAmount: (NSInteger) amount currency:(NSString *)currency{
     
     if (self = [super init]){

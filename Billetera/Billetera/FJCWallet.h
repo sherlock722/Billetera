@@ -11,4 +11,7 @@
 
 @interface FJCWallet : NSObject <FJCMoney>
 
+@property (nonatomic,readonly)NSUInteger count;
+//@property (nonatomic,strong)NSArray *currencies;
+
 @end
