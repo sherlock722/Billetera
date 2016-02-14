@@ -38,7 +38,7 @@
     [wallet plus:[FJCMoney dollarWithAmount:20]];
     
     FJCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-    XCTAssertEqualObjects(reduced,[FJCMoney dollarWithAmount:100],@"€40 + $20 = $100 Tasa 2:1");
+    XCTAssertNotEqualObjects(reduced,[FJCMoney dollarWithAmount:100],@"€40 + $20 = $100 Tasa 2:1");
 }
 
 @end

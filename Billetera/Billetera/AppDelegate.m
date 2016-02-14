@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "FJCWalletTableViewController.h"
+#import "FJCWallet.h"
+#import "FJCMoney.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    FJCWallet *model = [[FJCWallet alloc]initWithAmount:10 currency:@"USD"];
+    [model plus:[[FJCMoney alloc] initWithAmount:10 currency:@"EUR"]];
+    [model times:2];
+    [model plus:[FJCMoney dollarWithAmount:50]];
+    FJCWalletTableViewController *walletVC = [[FJCWalletTableViewController alloc] initWithModel:model];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:walletVC];
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

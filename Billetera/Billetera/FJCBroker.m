@@ -67,5 +67,23 @@
     
 }
 
+#pragma mark - Rates
+
+- (void)parseJSONRates:(NSData *)json{
+    
+    NSError *err = nil;
+    id obj =  [NSJSONSerialization JSONObjectWithData:json
+                                              options:NSJSONReadingAllowFragments
+                                                error:&err];
+    if (obj != nil) {
+        // Get rates and add to broker
+        
+    }else{
+        // No data
+        [NSException raise:@"NoRatesInJSONException"
+                    format:@"JSON must carry some data!"];
+    }
+}
+
 
 @end

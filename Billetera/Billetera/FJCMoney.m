@@ -94,7 +94,7 @@
 }
 
 
--(id <FJCMoney>) reduceToCurrency: (NSString*) currency
+-(FJCMoney *) reduceToCurrency: (NSString*) currency
                        wihtBroker: (FJCBroker*)broker{
     
     //Se comprueba que divisa de origen y destino son las mismas
@@ -139,7 +139,8 @@
     
     //Para que pase el test testDescription
     //return [NSString stringWithFormat:@"<%@ %ld", [self class], (long)[self amount]];
-    return [NSString stringWithFormat:@"<%@: %@ %@>", [self class],self.currency,self.amount];
+    //return [NSString stringWithFormat:@"<%@: %@ %@>", [self class],self.currency,self.amount];
+    return [NSString stringWithFormat:@"<%@ %@>", self.currency,self.amount];
 }
 
 

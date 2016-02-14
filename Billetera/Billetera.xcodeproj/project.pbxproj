@@ -24,6 +24,11 @@
 		3B84FDCB1C6FDE4E0023B922 /* FJCControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDCA1C6FDE4E0023B922 /* FJCControllerTests.m */; };
 		3B84FDCE1C6FE3B10023B922 /* FJCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDCD1C6FE3B10023B922 /* FJCWalletTableViewController.m */; };
 		3B84FDCF1C6FE3B10023B922 /* FJCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDCD1C6FE3B10023B922 /* FJCWalletTableViewController.m */; };
+		3B84FDD21C6FF62A0023B922 /* FJCNSNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDD11C6FF62A0023B922 /* FJCNSNotificationCenterTests.m */; };
+		3B84FDD51C6FF80F0023B922 /* FJCFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDD41C6FF80F0023B922 /* FJCFakeNotificationCenter.m */; };
+		3B84FDD61C6FF80F0023B922 /* FJCFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDD41C6FF80F0023B922 /* FJCFakeNotificationCenter.m */; };
+		3B84FDDD1C6FFDC30023B922 /* FJCNetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B84FDDC1C6FFDC30023B922 /* FJCNetworkTest.m */; };
+		3B93DD591C705020005C9BB8 /* FJCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */; };
 		3BB74CC31C6FCD8B00907B83 /* FJCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6600B1C6AA6FD00B27ADD /* FJCBroker.m */; };
 		3BC50AA21C6C030D00889F4B /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC50AA11C6C030D00889F4B /* WalletTests.m */; };
 		3BC50AA51C6C070600889F4B /* FJCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC50AA41C6C070600889F4B /* FJCWallet.m */; };
@@ -65,6 +70,10 @@
 		3B84FDCA1C6FDE4E0023B922 /* FJCControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCControllerTests.m; sourceTree = "<group>"; };
 		3B84FDCC1C6FE3B10023B922 /* FJCWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCWalletTableViewController.h; sourceTree = "<group>"; };
 		3B84FDCD1C6FE3B10023B922 /* FJCWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCWalletTableViewController.m; sourceTree = "<group>"; };
+		3B84FDD11C6FF62A0023B922 /* FJCNSNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCNSNotificationCenterTests.m; sourceTree = "<group>"; };
+		3B84FDD31C6FF80F0023B922 /* FJCFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCFakeNotificationCenter.h; sourceTree = "<group>"; };
+		3B84FDD41C6FF80F0023B922 /* FJCFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCFakeNotificationCenter.m; sourceTree = "<group>"; };
+		3B84FDDC1C6FFDC30023B922 /* FJCNetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCNetworkTest.m; sourceTree = "<group>"; };
 		3BC50AA11C6C030D00889F4B /* WalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
 		3BC50AA31C6C070600889F4B /* FJCWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJCWallet.h; sourceTree = "<group>"; };
 		3BC50AA41C6C070600889F4B /* FJCWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJCWallet.m; sourceTree = "<group>"; };
@@ -140,6 +149,8 @@
 		3B41C05E1C67B94B007D6E08 /* BilleteraTests */ = {
 			isa = PBXGroup;
 			children = (
+				3B84FDD71C6FFD4B0023B922 /* Network */,
+				3B84FDD01C6FF5640023B922 /* Singletons */,
 				3B84FDC91C6FDE130023B922 /* Controllers */,
 				3B41C06C1C67D538007D6E08 /* Models */,
 				3B41C0611C67B94B007D6E08 /* Info.plist */,
@@ -198,6 +209,24 @@
 				3B84FDCA1C6FDE4E0023B922 /* FJCControllerTests.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3B84FDD01C6FF5640023B922 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				3B84FDD11C6FF62A0023B922 /* FJCNSNotificationCenterTests.m */,
+				3B84FDD31C6FF80F0023B922 /* FJCFakeNotificationCenter.h */,
+				3B84FDD41C6FF80F0023B922 /* FJCFakeNotificationCenter.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		3B84FDD71C6FFD4B0023B922 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3B84FDDC1C6FFDC30023B922 /* FJCNetworkTest.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +339,10 @@
 				3B41C0801C67FC22007D6E08 /* NSObject+GNUStepAddons.m in Sources */,
 				3B84FDCE1C6FE3B10023B922 /* FJCWalletTableViewController.m in Sources */,
 				3B41C04A1C67B949007D6E08 /* AppDelegate.m in Sources */,
+				3B93DD591C705020005C9BB8 /* FJCBroker.m in Sources */,
 				3B41C0471C67B949007D6E08 /* main.m in Sources */,
 				3B84FDC51C6FDDFA0023B922 /* FJCSimpleViewController.m in Sources */,
+				3B84FDD51C6FF80F0023B922 /* FJCFakeNotificationCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +352,13 @@
 			files = (
 				3BC50AA21C6C030D00889F4B /* WalletTests.m in Sources */,
 				3B84FDCB1C6FDE4E0023B922 /* FJCControllerTests.m in Sources */,
+				3B84FDD21C6FF62A0023B922 /* FJCNSNotificationCenterTests.m in Sources */,
 				3BD660091C6AA44000B27ADD /* BrokerTests.m in Sources */,
+				3B84FDD61C6FF80F0023B922 /* FJCFakeNotificationCenter.m in Sources */,
 				3BB74CC31C6FCD8B00907B83 /* FJCBroker.m in Sources */,
 				3B41C0831C6804E1007D6E08 /* FJCMoney.m in Sources */,
 				3BC50AA61C6C094F00889F4B /* FJCWallet.m in Sources */,
+				3B84FDDD1C6FFDC30023B922 /* FJCNetworkTest.m in Sources */,
 				3B41C0821C68035E007D6E08 /* MoneyTests.m in Sources */,
 				3B84FDC61C6FDDFA0023B922 /* FJCSimpleViewController.m in Sources */,
 				3B84FDCF1C6FE3B10023B922 /* FJCWalletTableViewController.m in Sources */,

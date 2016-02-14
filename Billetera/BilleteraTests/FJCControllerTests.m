@@ -56,24 +56,41 @@
     XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text, @"Button and label should have the same text");
 }
 
--(void) testThatTableHasOneSection{
+-(void) testThatTableHasNumberOfSectionsIsNumberOfCurrenciesPlusOne{
     
     NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections, 1, @"There can be only one");
+    NSUInteger currencies = [self.wallet.currencies count];
+    
+    //XCTAssertEqual(sections, 3, @"There can be only one");
+    XCTAssertEqual(sections,
+                   currencies + 1,
+                   @"Number of sections should be the number of currencies plus one");
+    
+    
 }
 
--(void)testThatNumberOfCellsIsNumberOfMoneyOfThisCurrencyPlusOne{
+-(void)testThatTableHasNumberOfCellsIsNumberOfMoneyOfThisCurrencyPlusOne{
     
-    //NSString *currency = [self.wallet.currencies objectAtIndex:0];
-    //NSArray *moneys = [self.wallet moneysForCurrency: currency];
+    NSString *currency = [self.wallet.currencies objectAtIndex:0];
+    NSArray *moneys = [self.wallet moneysForCurrency: currency];
     
-    XCTAssertEqual([self.wallet count] + 1,
+    /*XCTAssertEqual([self.wallet count] + 1,
                    [self.walletVC tableView:nil
-                     numberOfRowsInSection:0], @"Number of cells is the the number of moneys plus 1 (the total)");
-                    
-                    
-                    
-                      //numberOfRowsInSection:0], @"Number of cells should be the number of moneys plus one");
+                     numberOfRowsInSection:0], 
+     @"Number of cells is the the number of moneys plus 1 (the total)");*/
+    
+    XCTAssertEqual([moneys count] + 1,
+                   [self.walletVC tableView:nil numberOfRowsInSection:0],
+                   @"Number of cells should be the number of moneys plus 1");
+    
+}
+
+- (void)testThatLastSectionHasOnlyOneCell {
+    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+    
+    XCTAssertEqual(1, [self.walletVC
+                       tableView:nil numberOfRowsInSection:sections],
+                        @"Number of cells in last section should be 1");
 }
 
 

@@ -7,6 +7,8 @@
 //
 
 #import "FJCWalletTableViewController.h"
+#import "FJCBroker.h"
+#import "FJCWallet.h"
 
 @interface FJCWalletTableViewController ()
 @property (nonatomic, strong)FJCWallet *model;
@@ -14,7 +16,8 @@
 
 @implementation FJCWalletTableViewController
 
-
+//Identificador de celda
+static NSString *cellID = @"CellIdentifier";
 
 - (id)initWithModel:(FJCWallet *)model{
     if (self = [super initWithStyle:UITableViewStylePlain]) {
@@ -42,13 +45,60 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
-    //return [self.model.currencies count] +1;
+    //return 1;
+    return [self.model.currencies count] +1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [self.model count] +1;
+    //return [self.model count] +1;
+    
+    if (section < [self.model.currencies count]) {
+        
+        NSArray *arrayCurrencies = [self.model moneysForCurrency:[self.model.currencies objectAtIndex:section]];
+        
+        return [arrayCurrencies count] +1;
+    }
+    
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+    FJCBroker *broker = [FJCBroker new];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    // Configure the cell...
+    if (indexPath.section < [self.model.currencies count]) {
+        NSString *currency = [self.model.currencies objectAtIndex:indexPath.section];
+        NSArray *moneys = [self.model moneysForCurrency:currency];
+        
+        if (indexPath.row < [moneys count]) {
+            
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", [moneys[indexPath.row] description]];
+            
+        }else{
+            
+            cell.textLabel.text = [[self.model subTotalForCurrency:currency] description];
+            cell.detailTextLabel.text = @"Subtotal";
+        }
+        
+    }else{
+            cell.textLabel.text = [[self.model reduceToCurrency:@"EUR" wihtBroker:broker]description];
+            cell.detailTextLabel.text = @"Total";
+    }
+    
+    return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    if (section < [self.model count]) {
+        return [self.model.currencies objectAtIndex:section];
+    }
+    
+    return @"Total";
 }
 
 /*
