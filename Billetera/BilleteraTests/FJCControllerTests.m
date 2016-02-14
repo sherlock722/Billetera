@@ -85,13 +85,7 @@
     
 }
 
-- (void)testThatLastSectionHasOnlyOneCell {
-    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    
-    XCTAssertEqual(1, [self.walletVC
-                       tableView:nil numberOfRowsInSection:sections],
-                        @"Number of cells in last section should be 1");
-}
+
 
 
 
